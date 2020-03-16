@@ -1,0 +1,32 @@
+<button type="button" onclick="btn1click(this)">i am button1,clicked me</button>
+<script>
+    function btn1click(elem) {
+        elem.innerhtml = "dont click me";
+    };
+</script>
+<button type="button" onclick="btn2click(this)">i am button1,clicked me</button>
+<button type="button" onclick="btn3click(this)">i am button1,clicked me</button>
+<div id="div05">
+<script>
+    function btn2Clicked(elem) {
+        elem.style = "display:none";
+        elem.parentNode.innerhtml = "it's gone";
+    };
+    function btn3Clicked(elem) {
+        elem.parentNode.className+=".class3";
+    };
+    function pageloaded()
+    {
+        rundiv05();
+    }
+    function rundiv05()
+    {
+        if(Math.random>0.5)
+        {
+            document.getElementById("div05").innerhtml="lower";
+        }
+        else{
+            document.getElementById("div05").innerhtml="upper";
+        }
+    }
+</script>
